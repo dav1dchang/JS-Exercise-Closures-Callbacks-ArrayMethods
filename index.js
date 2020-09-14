@@ -28,7 +28,11 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * Counter1 has the variable count inside the function counterMaker whereas in counter2, count is a global variable. Additionally, counter1 returns the function which leads to the count++ whereas counter2 returns the count++.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
+ * 
+ * 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
@@ -56,11 +60,13 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(score){
 
-    /*Code Here*/
+  return score = `The team scored ${Math.floor(Math.random() * 3)} runs in an inning`;
 
-}
+}//function inning
+
+console.log(inning())//invoking function and logging the result
 
 /* Task 3: finalScore()
 
@@ -76,11 +82,23 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(callback, inningNumber){
 
-  /*Code Here*/
+  let homeTeam = callback * inningNumber
+  let awayTeam = callback * inningNumber
 
-}
+  return `Home: ${homeTeam}`,
+         `Away: ${awayTeam}`;
+
+}//function finalScore
+
+function inning(score){
+
+  return score = Math.floor(Math.random() * 3)//removed text part of above function
+
+}//function inning
+
+console.log(score, 9)
 
 /* Task 4: 
 
